@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delivery Robot</title>
+    <script src="07_robot.js"></script>
+    <script src="animatevillage.js"></script>
+  </head>
+  <body>
+    <h2 style="margin-left: 20px">
+      Delivery Robot Simulation -
+      <button id="go">...GOOOO...</button>
+    </h2>
+    <script>
+      let starting = document.getElementById("go");
+      starting.onclick = function () {
+        const oldSimulation = document.querySelector("body>div");
+        if (oldSimulation) oldSimulation.remove();
+        runRobotAnimation(VillageState.random(), goalOrientedRobot, []);
+        //runRobotAnimation(VillageState.random(), routeRobot, []);
+      };
+    </script>
+  </body>
+</html>
